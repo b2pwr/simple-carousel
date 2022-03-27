@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div style={{ height: 500 }}>
-        <Carousel>
+        <Carousel showIndicator autoPlay swipeable>
           <img src='https://placekitten.com/200/300' alt="cat1" />
           <img src='https://placekitten.com/400/300' alt="cat2" />
           <img src='https://placekitten.com/600/200' alt="cat3" />
