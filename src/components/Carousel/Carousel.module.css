@@ -1,0 +1,93 @@
+.carouselRoot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  transition: all 1s ease 0s;
+  cursor: grab;
+}
+
+.carouselGrabbing {
+  cursor: grabbing;
+}
+
+.carouselUnit {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  
+}
+
+.carouselUnit > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.arrowLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding-left: 8px;
+}
+
+.arrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding-right: 4px;
+}
+
+.arrowLeft:hover, .arrowRight:hover {
+  background: rgba(0, 0, 0, .1);
+  cursor: pointer;
+  transition-property: all;
+  transition: all 1s ease 0s;
+}
+
+.dots {
+  display: flex;
+  position: absolute;
+  bottom: .5em;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.dot {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .5);
+  margin: .5em;
+  cursor: pointer;
+}
+
+.dotCurrent {
+  background-color: rgba(255, 255, 255);
+}
